@@ -1,0 +1,40 @@
+<div class="container custom-container-2">
+    <div class="d-flex justify-content-start">
+        <button class="btn btn-primary mt-3 mb-3" routerLink="/alcoholes/creacion">Agregar Alcohol</button>
+    </div>
+    <!-- Tabla de alcoholes, se oculta cuando no existen registros -->
+    <div *ngIf="alcoholes.length !== 0">
+        <h3 class="mb-3">Lista de alcoholes</h3>
+        <div class="col-md-12">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Id aAcohol</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let alcohol of alcoholes">
+                        <td>{{alcohol.id}}</td>
+                        <td>{{alcohol.nombre}}</td>
+                        <td>{{alcohol.precio}}</td>
+                        <td>{{alcohol.cantidad}}</td>
+                        <td>
+                            <span class="text-primary me-3" routerLink="/alcoholes/edicion/{{alcohol.id}}">
+                                <i class="bi bi-pencil-fill"></i>
+                            </span>
+
+                            <!-- Ícono para eliminar -->
+                            <span class="text-danger delete" (click)="deleteAlcohol(alcohol.id)">
+                                <i class="bi bi-trash-fill"></i>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="row justify-content-center mt-5">
+    <div class="col-md-4">
+        <form [formGroup]="alcoholForm" (ngSubmit)="updateAlcohol()">
+            <div class="form-group">
+                <label>Nombre</label>
+                <input class="form-control" type="text" formControlName="nombre" required />
+            </div>
+            <div class="form-group">
+                <label>Precio</label>
+                <input class="form-control" type="number" formControlName="precio" required />
+            </div>
+            <div class="form-group">
+                <label>Cantidad</label>
+                <input class="form-control" type="number" formControlName="cantidad" required />
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-block" type="submit">
+                    Actualizar alcohol
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
