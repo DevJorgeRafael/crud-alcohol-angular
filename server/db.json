@@ -17,6 +17,29 @@
       "nombre": "Juan",
       "correo": "juan@json.com",
       "telefono": "001-123-4568"
+    },
+    {
+      "nombre": "Mario Juan",
+      "correo": "mario@json.com",
+      "telefono": "123-456-789",
+      "id": "f500"
+    }
+  ],
+  "alcoholes": [
+    {
+      "id": "1",
+      "nombre": "Vodka",
+      "precio": "100"
+    },
+    {
+      "id": "2",
+      "nombre": "Tequila",
+      "precio": "200"
+    },
+    {
+      "id": "3",
+      "nombre": "Whiskey",
+      "precio": "300"
     }
   ]
 }
